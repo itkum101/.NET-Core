@@ -38,8 +38,7 @@ namespace Task2
 
 
         }
-        //Defining Method of a Delegate
-        public delegate void PersonDelegate(Person person);
+       
         static void Main(string[] args)
         {
             //List of a person: 
