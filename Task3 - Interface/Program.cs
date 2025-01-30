@@ -1,4 +1,6 @@
 ﻿using System;
+using Task3.Interfaces;
+using Task3.Models;
 
 namespace Task3
 {
@@ -6,6 +8,31 @@ namespace Task3
     {
         static void Main(string[] args)
         {
+
+
+
+
+            IPayment paypalPayment = new PayPalPayment
+            {
+                Email = "subedimukti14@gmail.com",
+                transactionID = "123456",
+                Amount = 200
+            };
+
+            paypalPayment.ProcessPayment(); 
+
+            IPayment creditCardPayment = new CreditCardPayment
+            {
+                cardNumber = "1111111111111111",
+                cardHolderName = "Mukti Subedi",
+                expiryDate = new DateTime(2029, 1, 1),
+                amount = 100
+            };
+
+            creditCardPayment.ProcessPayment(); 
+
+
+
             // === Testing Singly Linked List ===
             Console.WriteLine("SinglyLinkedList");
             LinkedList<int> singlyLinkedList = new LinkedList<int>();
@@ -56,30 +83,36 @@ namespace Task3
 
             Console.WriteLine("\n Stack Test ");
             Stack<int> stack = new Stack<int>(5);
+            try
+            {
+                stack.Push(100);
+                stack.Push(200);
+                stack.Push(300);
+                stack.Display();
 
-            stack.Push(100);
-            stack.Push(200);
-            stack.Push(300);
-            stack.Display();
+                Console.WriteLine($"Peek: {stack.Peek()}");
 
-            Console.WriteLine($"Peek: {stack.Peek()}");
+                stack.Pop();
+                stack.Display();
 
-            stack.Pop();
-            stack.Display();
+                stack.Pop();
+                stack.Pop();
+                stack.Pop(); //Empty Stack
 
-            stack.Pop();
-            stack.Pop();
-            stack.Pop(); //Empty Stack
+                //Stack Overflow
+                stack.Push(1);
+                stack.Push(2);
+                stack.Push(3);
+                stack.Push(4);
+                stack.Push(5);
+                stack.Push(6); //Stack Overflow
 
-            //Stack Overflow
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
-            stack.Push(4);
-            stack.Push(5);
-            stack.Push(6); //Stack Overflow
-
-            stack.Display();
+                stack.Display();
+            }
+            catch(Exception Ex)
+            {
+                Console.WriteLine($"{Ex.Message}");
+            }
 
 
         }

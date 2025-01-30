@@ -32,7 +32,7 @@ namespace Task3
         {
             if (_currentIndex == 0)
             {
-                throw new InvalidOperationException("Stack empty.");
+                throw new InvalidOperationException("Stack is Empty");
             }
 
             T poppedItem = _items[--_currentIndex];
@@ -44,7 +44,7 @@ namespace Task3
         {
             if (_currentIndex == 0)
             {
-                throw new InvalidOperationException("Stack is empty.");
+                throw new InvalidOperationException("Stack is Empty");
             }
 
             return _items[_currentIndex - 1];
