@@ -1,0 +1,110 @@
+<h1 id="markdown-test-cases">Markdown Test Cases</h1>
+<h2 id="headings">Headings</h2>
+<h1 id="heading-1">Heading 1</h1>
+<h2 id="heading-2">Heading 2</h2>
+<h3 id="heading-3">Heading 3</h3>
+<h4 id="heading-4">Heading 4</h4>
+<h5 id="heading-5">Heading 5</h5>
+<h6 id="heading-6">Heading 6</h6>
+<h2 id="paragraphs">Paragraphs</h2>
+<p>This is a normal paragraph with multiple sentences. It should render correctly.</p>
+<p>This is another paragraph.</p>
+<h2 id="line-breaks">Line Breaks</h2>
+<p>This is a line with two spaces at the end.<br>This should be on a new line.</p>
+<p>This is another line.</p>
+<h2 id="emphasis">Emphasis</h2>
+<p><em>Italic using asterisks</em></p>
+<p><em>Italic using underscores</em></p>
+<p><strong>Bold using double asterisks</strong></p>
+<p><strong>Bold using double underscores</strong></p>
+<p><strong><em>Bold and Italic using triple asterisks</em></strong></p>
+<p><strong><em>Bold and Italic using triple underscores</em></strong></p>
+<h2 id="blockquotes">Blockquotes</h2>
+<blockquote>
+    <p>This is a blockquote.</p>
+    <p>It can span multiple lines.</p>
+    <blockquote>
+        <p>Nested Blockquote Level 2</p>
+        <blockquote>
+            <p>Nested Blockquote Level 3</p>
+        </blockquote>
+    </blockquote>
+</blockquote>
+<h2 id="lists">Lists</h2>
+<h3 id="unordered-lists">Unordered Lists</h3>
+<ul>
+    <li>Item 1</li>
+    <li>
+        Item 2<ul>
+            <li>Nested Item 1</li>
+            <li>
+                Nested Item 2<ul>
+                    <li>Deeper Nested Item</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <p>Item 3</p>
+    </li>
+    <li>
+        <p>Item 1</p>
+    </li>
+    <li>Item 2</li>
+    <li>
+        <p>Item 3</p>
+    </li>
+    <li>
+        <p>Item A</p>
+    </li>
+    <li>Item B</li>
+</ul>
+<h3 id="ordered-lists">Ordered Lists</h3>
+<ol>
+    <li>First Item</li>
+    <li>
+        Second Item<ol>
+            <li>Nested Item 1</li>
+            <li>Nested Item 2</li>
+        </ol>
+    </li>
+    <li>Third Item</li>
+</ol>
+<h3 id="mixed-lists">Mixed Lists</h3>
+<ol>
+    <li>
+        Ordered Item<ul>
+            <li>Unordered Sub-item</li>
+            <li>Another Unordered Sub-item</li>
+        </ul>
+    </li>
+    <li>Another Ordered Item</li>
+</ol>
+<h2 id="code">Code</h2>
+<h3 id="inline-code">Inline Code</h3>
+<p>Use <code>code</code> inside a sentence.</p>
+<h3 id="block-code">Block Code</h3>
+<pre><code>This is <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">code</span> block.
+Multiple lines are supported.
+</code></pre><pre><code class="lang-python"><span class="hljs-comment"># Python example</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Hello, World!"</span>)
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// JavaScript example</span>
+console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"Hello, World!"</span>);
+</code></pre>
+<h3 id="indented-code-block">Indented Code Block</h3>
+<pre><code>This is an indented <span class="hljs-selector-tag">code</span> block.
+It should be treated as <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">code</span> block.
+</code></pre>
+<h2 id="horizontal-rules">Horizontal Rules</h2>
+<hr>
+<hr>
+<hr>
+<h2 id="links">Links</h2>
+<p><a href="https://example.com">Inline Link</a></p>
+<p><a href="https://example.com" title="Example Site">Reference Link</a></p>
+<p><a href="https://example.com">Auto Link</a></p>
+<h2 id="images">Images</h2>
+<p><img src="https://via.placeholder.com/150" alt="Alt Text"></p>
+<p><img src="https://via.placeholder.com/150" alt="Image with Title" title="Placeholder Image"></p>
+<p><a href="https://example.com"><img src="https://via.placeholder.com/150" alt="Linked Image"></a></p>
