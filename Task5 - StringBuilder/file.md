@@ -39,12 +39,6 @@ ___Bold and Italic using triple underscores___
 ## Blockquotes
 
 > This is a blockquote.
->
-> It can span multiple lines.
-
->> Nested Blockquote Level 2
->>
->>> Nested Blockquote Level 3
 
 ## Lists
 
@@ -52,9 +46,6 @@ ___Bold and Italic using triple underscores___
 
 - Item 1
 - Item 2
-  - Nested Item 1
-  - Nested Item 2
-    - Deeper Nested Item
 - Item 3
 
 * Item 1
@@ -68,16 +59,8 @@ ___Bold and Italic using triple underscores___
 
 1. First Item
 2. Second Item
-   1. Nested Item 1
-   2. Nested Item 2
 3. Third Item
 
-### Mixed Lists
-
-1. Ordered Item
-   - Unordered Sub-item
-   - Another Unordered Sub-item
-2. Another Ordered Item
 
 ## Code
 
@@ -102,10 +85,7 @@ print("Hello, World!")
 console.log("Hello, World!");
 ```
 
-### Indented Code Block
 
-    This is an indented code block.
-    It should be treated as a code block.
 
 ## Horizontal Rules
 
@@ -134,5 +114,5 @@ ___
 [![Linked Image](https://via.placeholder.com/150)](https://example.com)
 
 
-```
+
 
