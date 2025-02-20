@@ -1,0 +1,47 @@
+﻿@model List<Product>
+
+@{
+    ViewData["Title"] = "Product Input";
+}
+
+<h2>Enter Product Details</h2>
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{
+    <div class="alert alert-success">
+        @ViewBag.Message
+    </div>
+}
+
+<form asp-action="Submit" method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Unit</th>
+                <th>Quantity</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <input asp-for="@Model[i].Name" class="form-control" />
+                    </td>
+                    <td>
+                        <input asp-for="@Model[i].Unit" class="form-control" />
+                    </td>
+                    <td>
+                        <input asp-for="@Model[i].Quantity" type="number" class="form-control" />
+                    </td>
+                    <td>
+                        <input asp-for="@Model[i].Description" class="form-control" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,43 @@
+﻿@model List<Student>
+
+<h2 class="text-center mt-4">Student List</h2>
+
+<div class="container mt-4">
+    <table class="table table-hover table-bordered text-center">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Enrollment Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.Name</td>
+                    <td>@student.Age</td>
+                    <td>@student.Grade</td>
+                    <td><a href="mailto:@student.Email">@student.Email</a></td>
+                    <td><a href="tel:@student.PhoneNumber">@student.PhoneNumber</a></td>
+                    <td>@student.Address</td>
+                    <td>@student.EnrollmentDate.ToString("MMM dd, yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    .table {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .table-hover tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+</style>
